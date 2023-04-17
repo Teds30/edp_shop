@@ -25,13 +25,13 @@ Partial Class Employee
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgv_Products = New System.Windows.Forms.DataGridView()
+        Me.EmployeeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_AddEmployee = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_EmployeeName = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.EmployeeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -74,6 +74,20 @@ Partial Class Employee
         Me.dgv_Products.RowTemplate.Height = 29
         Me.dgv_Products.Size = New System.Drawing.Size(555, 335)
         Me.dgv_Products.TabIndex = 30
+        '
+        'EmployeeID
+        '
+        Me.EmployeeID.HeaderText = "Employee ID"
+        Me.EmployeeID.MinimumWidth = 6
+        Me.EmployeeID.Name = "EmployeeID"
+        Me.EmployeeID.Width = 125
+        '
+        'EmployeeName
+        '
+        Me.EmployeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.EmployeeName.HeaderText = "Employee Name"
+        Me.EmployeeName.MinimumWidth = 6
+        Me.EmployeeName.Name = "EmployeeName"
         '
         'btn_AddEmployee
         '
@@ -131,20 +145,6 @@ Partial Class Employee
         Me.GroupBox1.TabIndex = 33
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Add new Employee"
-        '
-        'EmployeeID
-        '
-        Me.EmployeeID.HeaderText = "Employee ID"
-        Me.EmployeeID.MinimumWidth = 6
-        Me.EmployeeID.Name = "EmployeeID"
-        Me.EmployeeID.Width = 125
-        '
-        'EmployeeName
-        '
-        Me.EmployeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.EmployeeName.HeaderText = "Employee Name"
-        Me.EmployeeName.MinimumWidth = 6
-        Me.EmployeeName.Name = "EmployeeName"
         '
         'Employee
         '

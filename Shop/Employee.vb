@@ -3,4 +3,8 @@
         Me.Hide()
         Form1.Show()
     End Sub
+
+    Private Sub Employee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

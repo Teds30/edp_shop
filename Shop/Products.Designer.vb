@@ -40,6 +40,10 @@ Partial Class Products
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txt_ProdCat = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.tbFileDir = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -224,12 +228,60 @@ Partial Class Products
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List Prooduct"
         '
+        'tbFileDir
+        '
+        Me.tbFileDir.Location = New System.Drawing.Point(40, 531)
+        Me.tbFileDir.Name = "tbFileDir"
+        Me.tbFileDir.Size = New System.Drawing.Size(393, 27)
+        Me.tbFileDir.TabIndex = 34
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(456, 531)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(94, 29)
+        Me.Button4.TabIndex = 33
+        Me.Button4.Text = "Browse"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button3.Location = New System.Drawing.Point(565, 516)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(139, 52)
+        Me.Button3.TabIndex = 32
+        Me.Button3.Text = "🔽Import"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button5.Location = New System.Drawing.Point(718, 516)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(139, 52)
+        Me.Button5.TabIndex = 35
+        Me.Button5.Text = "🔼Export"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1172, 526)
+        Me.ClientSize = New System.Drawing.Size(1172, 609)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.tbFileDir)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txt_ProdCat)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label5)
@@ -270,4 +322,8 @@ Partial Class Products
     Friend WithEvents Button2 As Button
     Friend WithEvents txt_ProdCat As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents tbFileDir As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button5 As Button
 End Class

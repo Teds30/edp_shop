@@ -25,7 +25,12 @@ Partial Class Orders
         Me.txt_ProdCat = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.dgv_Products = New System.Windows.Forms.DataGridView()
+        Me.dgv_Orders = New System.Windows.Forms.DataGridView()
+        Me.OrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Customer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Employee = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btn_AddProduct = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,14 +39,9 @@ Partial Class Orders
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.OrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Customer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Employee = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductQuantity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        CType(Me.dgv_Orders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,7 +61,7 @@ Partial Class Orders
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(472, 91)
+        Me.Button2.Location = New System.Drawing.Point(573, 91)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(139, 52)
         Me.Button2.TabIndex = 26
@@ -78,20 +78,55 @@ Partial Class Orders
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Orders"
         '
-        'dgv_Products
+        'dgv_Orders
         '
-        Me.dgv_Products.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgv_Products.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.dgv_Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_Products.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.OrderID, Me.Customer, Me.Employee, Me.ProductName, Me.ProductQuantity})
-        Me.dgv_Products.GridColor = System.Drawing.SystemColors.ControlLight
-        Me.dgv_Products.Location = New System.Drawing.Point(56, 150)
-        Me.dgv_Products.MultiSelect = False
-        Me.dgv_Products.Name = "dgv_Products"
-        Me.dgv_Products.RowHeadersWidth = 51
-        Me.dgv_Products.RowTemplate.Height = 29
-        Me.dgv_Products.Size = New System.Drawing.Size(656, 335)
-        Me.dgv_Products.TabIndex = 24
+        Me.dgv_Orders.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgv_Orders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgv_Orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_Orders.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.OrderID, Me.Customer, Me.Employee, Me.ProductName, Me.ProductQuantity})
+        Me.dgv_Orders.GridColor = System.Drawing.SystemColors.ControlLight
+        Me.dgv_Orders.Location = New System.Drawing.Point(56, 150)
+        Me.dgv_Orders.MultiSelect = False
+        Me.dgv_Orders.Name = "dgv_Orders"
+        Me.dgv_Orders.RowHeadersWidth = 51
+        Me.dgv_Orders.RowTemplate.Height = 29
+        Me.dgv_Orders.Size = New System.Drawing.Size(656, 335)
+        Me.dgv_Orders.TabIndex = 24
+        '
+        'OrderID
+        '
+        Me.OrderID.HeaderText = "Order ID"
+        Me.OrderID.MinimumWidth = 6
+        Me.OrderID.Name = "OrderID"
+        Me.OrderID.Width = 125
+        '
+        'Customer
+        '
+        Me.Customer.HeaderText = "Customer"
+        Me.Customer.MinimumWidth = 6
+        Me.Customer.Name = "Customer"
+        Me.Customer.Width = 125
+        '
+        'Employee
+        '
+        Me.Employee.HeaderText = "Employee"
+        Me.Employee.MinimumWidth = 6
+        Me.Employee.Name = "Employee"
+        Me.Employee.Width = 125
+        '
+        'ProductName
+        '
+        Me.ProductName.HeaderText = "Product Name"
+        Me.ProductName.MinimumWidth = 6
+        Me.ProductName.Name = "ProductName"
+        Me.ProductName.Width = 125
+        '
+        'ProductQuantity
+        '
+        Me.ProductQuantity.HeaderText = "Quantity"
+        Me.ProductQuantity.MinimumWidth = 6
+        Me.ProductQuantity.Name = "ProductQuantity"
+        Me.ProductQuantity.Width = 125
         '
         'Label4
         '
@@ -190,15 +225,6 @@ Partial Class Orders
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "New Order"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(32, 155)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(321, 39)
-        Me.ComboBox1.TabIndex = 29
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -209,55 +235,29 @@ Partial Class Orders
         Me.Label6.TabIndex = 30
         Me.Label6.Text = "0.00"
         '
-        'OrderID
+        'ComboBox1
         '
-        Me.OrderID.HeaderText = "Order ID"
-        Me.OrderID.MinimumWidth = 6
-        Me.OrderID.Name = "OrderID"
-        Me.OrderID.Width = 125
-        '
-        'Customer
-        '
-        Me.Customer.HeaderText = "Customer"
-        Me.Customer.MinimumWidth = 6
-        Me.Customer.Name = "Customer"
-        Me.Customer.Width = 125
-        '
-        'Employee
-        '
-        Me.Employee.HeaderText = "Employee"
-        Me.Employee.MinimumWidth = 6
-        Me.Employee.Name = "Employee"
-        Me.Employee.Width = 125
-        '
-        'ProductName
-        '
-        Me.ProductName.HeaderText = "Product Name"
-        Me.ProductName.MinimumWidth = 6
-        Me.ProductName.Name = "ProductName"
-        Me.ProductName.Width = 125
-        '
-        'ProductQuantity
-        '
-        Me.ProductQuantity.HeaderText = "Quantity"
-        Me.ProductQuantity.MinimumWidth = 6
-        Me.ProductQuantity.Name = "ProductQuantity"
-        Me.ProductQuantity.Width = 125
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(32, 155)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(321, 39)
+        Me.ComboBox1.TabIndex = 29
         '
         'Orders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1191, 532)
+        Me.ClientSize = New System.Drawing.Size(1191, 586)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.dgv_Products)
+        Me.Controls.Add(Me.dgv_Orders)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Orders"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Orders"
-        CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_Orders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -268,7 +268,7 @@ Partial Class Orders
     Friend WithEvents txt_ProdCat As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents dgv_Products As DataGridView
+    Friend WithEvents dgv_Orders As DataGridView
     Friend WithEvents OrderID As DataGridViewTextBoxColumn
     Friend WithEvents Customer As DataGridViewTextBoxColumn
     Friend WithEvents Employee As DataGridViewTextBoxColumn
