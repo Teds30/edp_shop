@@ -88,6 +88,7 @@ Public Class Products
                 MsgBox("Successfully imported!")
                 Call Disconnect_to_DB()
             End With
+            Load_Data()
         End If
     End Sub
     Public Sub Load_Data()
@@ -113,6 +114,7 @@ Public Class Products
         Disconnect_to_DB()
 
 
+        txt_ProdCat.Items.Clear()
         query = "SELECT * FROM categories"
         Connect_to_DB()
 
