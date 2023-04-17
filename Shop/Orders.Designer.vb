@@ -40,7 +40,7 @@ Partial Class Orders
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cb_Products = New System.Windows.Forms.ComboBox()
         CType(Me.dgv_Orders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -210,7 +210,7 @@ Partial Class Orders
         '
         Me.GroupBox1.Controls.Add(Me.txt_ProdCat)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cb_Products)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -235,14 +235,14 @@ Partial Class Orders
         Me.Label6.TabIndex = 30
         Me.Label6.Text = "0.00"
         '
-        'ComboBox1
+        'cb_Products
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(32, 155)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(321, 39)
-        Me.ComboBox1.TabIndex = 29
+        Me.cb_Products.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_Products.FormattingEnabled = True
+        Me.cb_Products.Location = New System.Drawing.Point(32, 155)
+        Me.cb_Products.Name = "cb_Products"
+        Me.cb_Products.Size = New System.Drawing.Size(321, 39)
+        Me.cb_Products.TabIndex = 29
         '
         'Orders
         '
@@ -283,5 +283,5 @@ Partial Class Orders
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cb_Products As ComboBox
 End Class
