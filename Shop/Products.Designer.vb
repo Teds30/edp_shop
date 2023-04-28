@@ -44,6 +44,7 @@ Partial Class Products
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -272,12 +273,27 @@ Partial Class Products
         Me.Button5.Text = "🔼Export"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'btnPrint
+        '
+        Me.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnPrint.Location = New System.Drawing.Point(342, 91)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(139, 52)
+        Me.btnPrint.TabIndex = 36
+        Me.btnPrint.Text = "🖨️Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1172, 609)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.tbFileDir)
         Me.Controls.Add(Me.Button4)
@@ -326,4 +342,5 @@ Partial Class Products
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents btnPrint As Button
 End Class
