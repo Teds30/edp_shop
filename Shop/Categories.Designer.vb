@@ -25,14 +25,14 @@ Partial Class Categories
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgv_Products = New System.Windows.Forms.DataGridView()
-        Me.btn_AddProduct = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_ProdName = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Category = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductsCount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_AddProduct = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_CatName = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -76,6 +76,27 @@ Partial Class Categories
         Me.dgv_Products.Size = New System.Drawing.Size(555, 335)
         Me.dgv_Products.TabIndex = 24
         '
+        'Category
+        '
+        Me.Category.HeaderText = "Category"
+        Me.Category.MinimumWidth = 6
+        Me.Category.Name = "Category"
+        Me.Category.Width = 125
+        '
+        'ProductsCount
+        '
+        Me.ProductsCount.HeaderText = "Products Count"
+        Me.ProductsCount.MinimumWidth = 6
+        Me.ProductsCount.Name = "ProductsCount"
+        Me.ProductsCount.Width = 125
+        '
+        'TotalAmount
+        '
+        Me.TotalAmount.HeaderText = "Total Amount"
+        Me.TotalAmount.MinimumWidth = 6
+        Me.TotalAmount.Name = "TotalAmount"
+        Me.TotalAmount.Width = 125
+        '
         'btn_AddProduct
         '
         Me.btn_AddProduct.BackColor = System.Drawing.Color.RoyalBlue
@@ -100,14 +121,14 @@ Partial Class Categories
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Category Name"
         '
-        'txt_ProdName
+        'txt_CatName
         '
-        Me.txt_ProdName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_ProdName.Location = New System.Drawing.Point(32, 96)
-        Me.txt_ProdName.Name = "txt_ProdName"
-        Me.txt_ProdName.PlaceholderText = "Enter category name"
-        Me.txt_ProdName.Size = New System.Drawing.Size(321, 34)
-        Me.txt_ProdName.TabIndex = 16
+        Me.txt_CatName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_CatName.Location = New System.Drawing.Point(32, 96)
+        Me.txt_CatName.Name = "txt_CatName"
+        Me.txt_CatName.PlaceholderText = "Enter category name"
+        Me.txt_CatName.Size = New System.Drawing.Size(321, 34)
+        Me.txt_CatName.TabIndex = 16
         '
         'Button1
         '
@@ -125,7 +146,7 @@ Partial Class Categories
         '
         Me.GroupBox1.Controls.Add(Me.btn_AddProduct)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txt_ProdName)
+        Me.GroupBox1.Controls.Add(Me.txt_CatName)
         Me.GroupBox1.Location = New System.Drawing.Point(718, 61)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(397, 270)
@@ -133,28 +154,7 @@ Partial Class Categories
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Add new Category"
         '
-        'Category
-        '
-        Me.Category.HeaderText = "Category"
-        Me.Category.MinimumWidth = 6
-        Me.Category.Name = "Category"
-        Me.Category.Width = 125
-        '
-        'ProductsCount
-        '
-        Me.ProductsCount.HeaderText = "Products Count"
-        Me.ProductsCount.MinimumWidth = 6
-        Me.ProductsCount.Name = "ProductsCount"
-        Me.ProductsCount.Width = 125
-        '
-        'TotalAmount
-        '
-        Me.TotalAmount.HeaderText = "Total Amount"
-        Me.TotalAmount.MinimumWidth = 6
-        Me.TotalAmount.Name = "TotalAmount"
-        Me.TotalAmount.Width = 125
-        '
-        'Categoriesvb
+        'Categories
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -164,7 +164,7 @@ Partial Class Categories
         Me.Controls.Add(Me.dgv_Products)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Categoriesvb"
+        Me.Name = "Categories"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Categoriesvb"
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).EndInit()
@@ -183,7 +183,7 @@ Partial Class Categories
     Friend WithEvents TotalAmount As DataGridViewTextBoxColumn
     Friend WithEvents btn_AddProduct As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents txt_ProdName As TextBox
+    Friend WithEvents txt_CatName As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
 End Class

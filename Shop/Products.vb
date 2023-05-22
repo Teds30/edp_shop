@@ -35,7 +35,7 @@ Public Class Products
             & .txt_ProdCat.Text & "'" _
             & ");"
 
-            'MsgBox(strSQL)
+
             Try
                 mycmd.CommandText = strSQL
                 mycmd.Connection = myconn
@@ -130,6 +130,7 @@ Public Class Products
         End While
 
 
+
         Disconnect_to_DB()
 
     End Sub
@@ -164,4 +165,5 @@ INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/products_export.csv'
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         Call exportToExcel(dgv_Products, "D:\Programming\VB.NET\School Stuff\EDP\week3\Shop\Shop\export\products_template.xlsx", "products")
     End Sub
+
 End Class

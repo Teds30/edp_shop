@@ -25,14 +25,14 @@ Partial Class Customervb
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgv_Products = New System.Windows.Forms.DataGridView()
-        Me.btn_AddCustomer = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_EmployeeName = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CustomerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CustomerName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalOrders = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_AddCustomer = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_CustomerName = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.dgv_Products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -76,6 +76,27 @@ Partial Class Customervb
         Me.dgv_Products.Size = New System.Drawing.Size(555, 335)
         Me.dgv_Products.TabIndex = 35
         '
+        'CustomerID
+        '
+        Me.CustomerID.HeaderText = "Customer ID"
+        Me.CustomerID.MinimumWidth = 6
+        Me.CustomerID.Name = "CustomerID"
+        Me.CustomerID.Width = 125
+        '
+        'CustomerName
+        '
+        Me.CustomerName.HeaderText = "Customer Name"
+        Me.CustomerName.MinimumWidth = 6
+        Me.CustomerName.Name = "CustomerName"
+        Me.CustomerName.Width = 125
+        '
+        'TotalOrders
+        '
+        Me.TotalOrders.HeaderText = "Total Orders"
+        Me.TotalOrders.MinimumWidth = 6
+        Me.TotalOrders.Name = "TotalOrders"
+        Me.TotalOrders.Width = 125
+        '
         'btn_AddCustomer
         '
         Me.btn_AddCustomer.BackColor = System.Drawing.Color.RoyalBlue
@@ -100,14 +121,14 @@ Partial Class Customervb
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Customer Name"
         '
-        'txt_EmployeeName
+        'txt_CustomerName
         '
-        Me.txt_EmployeeName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_EmployeeName.Location = New System.Drawing.Point(32, 96)
-        Me.txt_EmployeeName.Name = "txt_EmployeeName"
-        Me.txt_EmployeeName.PlaceholderText = "Enter customer name"
-        Me.txt_EmployeeName.Size = New System.Drawing.Size(321, 34)
-        Me.txt_EmployeeName.TabIndex = 16
+        Me.txt_CustomerName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_CustomerName.Location = New System.Drawing.Point(32, 96)
+        Me.txt_CustomerName.Name = "txt_CustomerName"
+        Me.txt_CustomerName.PlaceholderText = "Enter customer name"
+        Me.txt_CustomerName.Size = New System.Drawing.Size(321, 34)
+        Me.txt_CustomerName.TabIndex = 16
         '
         'Button1
         '
@@ -125,34 +146,13 @@ Partial Class Customervb
         '
         Me.GroupBox1.Controls.Add(Me.btn_AddCustomer)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txt_EmployeeName)
+        Me.GroupBox1.Controls.Add(Me.txt_CustomerName)
         Me.GroupBox1.Location = New System.Drawing.Point(729, 64)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(397, 270)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Add new Customer"
-        '
-        'CustomerID
-        '
-        Me.CustomerID.HeaderText = "Customer ID"
-        Me.CustomerID.MinimumWidth = 6
-        Me.CustomerID.Name = "CustomerID"
-        Me.CustomerID.Width = 125
-        '
-        'CustomerName
-        '
-        Me.CustomerName.HeaderText = "Customer Name"
-        Me.CustomerName.MinimumWidth = 6
-        Me.CustomerName.Name = "CustomerName"
-        Me.CustomerName.Width = 125
-        '
-        'TotalOrders
-        '
-        Me.TotalOrders.HeaderText = "Total Orders"
-        Me.TotalOrders.MinimumWidth = 6
-        Me.TotalOrders.Name = "TotalOrders"
-        Me.TotalOrders.Width = 125
         '
         'Customervb
         '
@@ -180,7 +180,7 @@ Partial Class Customervb
     Friend WithEvents dgv_Products As DataGridView
     Friend WithEvents btn_AddCustomer As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents txt_EmployeeName As TextBox
+    Friend WithEvents txt_CustomerName As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CustomerID As DataGridViewTextBoxColumn
